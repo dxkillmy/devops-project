@@ -14,7 +14,7 @@ def get_db():
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello from DevOps Project!"}
+    return {"message": "Hello from DevOps Project I love u!"}
 
 @app.get("/health")
 def health():
