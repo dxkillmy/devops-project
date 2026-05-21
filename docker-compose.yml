@@ -6,18 +6,18 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DB_HOST=mysql
-      - DB_USER=root
-      - DB_PASSWORD=password123
-      - DB_NAME=tododb
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
     depends_on:
       - mysql
 
   mysql:
     image: mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=password123
-      - MYSQL_DATABASE=tododb
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
     ports:
       - "3307:3306"
 
